@@ -8,7 +8,7 @@ module.exports = [
     "./gulp/task/favicons",
     "./gulp/task/iconfont",
     "./gulp/task/transfer",
-    // "./gulp/task/scripts",
+    "./gulp/task/scripts",
 
     
 ];

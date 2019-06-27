@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.4.5",
     "gulp-pug-beautify": "^0.0.1"
   },
   "devDependencies": {
