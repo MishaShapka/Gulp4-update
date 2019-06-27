@@ -26,6 +26,7 @@ global.$ = {
     uglify: require("gulp-uglify"),
     concat: require("gulp-concat"),
     gulpPugBeautify: require('gulp-pug-beautify'),
+    concat: require('gulp-concat'),
 
     path: {
         tasks: require("./gulp/config.js")
