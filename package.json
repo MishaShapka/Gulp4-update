@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "@babel/core": "^7.2.0"
+    "@babel/core": "^7.2.0",
+    "gulp-pug-beautify": "^0.0.1"
   },
   "devDependencies": {
     "@babel/preset-react": "^7.0.0",
