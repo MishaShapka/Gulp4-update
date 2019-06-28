@@ -1,13 +1,15 @@
 module.exports = function() {
     $.gulp.task('sass', function(){
-	    return $.gulp.src(['./src/sass/**/*.sass']) // Берем все sass файлы из папки sass и дочерних, если таковые будут
+	    return $.gulp.src(['./src/sass/**/*.sass', '!./src/sass/**/*.css']) // Берем все sass файлы из папки sass и дочерних, если таковые будут
 			
-			.pipe( $.sass().on( 'error', $.notify.onError( //уведомления
+
+			.pipe( $.sass().on( 'error', $.notify.onError( //Уведомление
 			      {
 			        message: "<%= error.message %>",
 			        title  : "Кэп! Твой код пошел по пизде!"
 			      } )))
 			.pipe($.sass())
+
 
 	        .pipe($.autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) //автопрефикс
 			.pipe($.mincss({compatibility: "ie8", level: {1: {specialComments: 0}}})) //Минификация css
