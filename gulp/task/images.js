@@ -1,7 +1,7 @@
 module.exports = function() {
     $.gulp.task("images", function() {
         return $.gulp.src(["./src/img/**/*.{jpg,jpeg,png,gif}", "!./src/img/svg/icons/*", "!./src/img/favicons/*.{jpg,jpeg,png,gif}"])
-            .pipe($.newer("./dest/img/"))
+            .pipe($.newer("./dist/img/"))
             .pipe($.imagemin([
                 $.imagemin.gifsicle({interlaced: true}),
                 $.imagemin.jpegtran({progressive: true}),
@@ -14,7 +14,7 @@ module.exports = function() {
                 $.imagemin.optipng({optimizationLevel: 5}),
                 $.pngquant({quality: "65-70", speed: 5})
             ]))
-            .pipe($.gulp.dest("./dest/img/"))
+            .pipe($.gulp.dest("./dist/img/"))
             .pipe($.debug({"title": "images"}))
             .on("end", $.browsersync.reload);
     });

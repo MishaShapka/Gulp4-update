@@ -9,8 +9,8 @@ module.exports = function() {
                 } ) )
             )
             .pipe($.gulpPugBeautify({ omit_empty: true }))
-            .pipe($.replace("../dest/"))
-            .pipe($.gulp.dest("./dest/"))
+            .pipe($.replace("../dist/"))
+            .pipe($.gulp.dest("./dist/"))
             .pipe($.debug({"title": "html"}))
             .on("end", $.browsersync.reload);
     });

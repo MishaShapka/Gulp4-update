@@ -7,7 +7,7 @@ module.exports = function () {
             .pipe($.uglify())
             .pipe($.rename({suffix: ".min"}))
             .pipe($.sourcemaps.write("./maps/"))
-            .pipe($.gulp.dest("./dest/js/"))
+            .pipe($.gulp.dest("./dist/js/"))
             .pipe($.debug({"title": "scripts"}))
             .on("end", $.browsersync.reload);
     });

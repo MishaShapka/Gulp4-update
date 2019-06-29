@@ -4,7 +4,7 @@ module.exports = function() {
             .pipe($.iconfontcss({
                 fontName: "icons",
                 targetPath: '../../src/sass/partials/_iconfont.scss',
-                fontPath: '../../dest/fonts/'
+                fontPath: '../../dist/fonts/'
             }))
             .pipe($.iconfont({
                 prependUnicode: false,
@@ -13,7 +13,7 @@ module.exports = function() {
                 normalize: true,
                 fontHeight: 1001
             }))
-            .pipe($.gulp.dest("./dest/fonts/"))
+            .pipe($.gulp.dest("./dist/fonts/"))
             .pipe($.debug({"title": "iconfont"}));
     });
 };
