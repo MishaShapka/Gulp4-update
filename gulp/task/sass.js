@@ -1,6 +1,6 @@
 module.exports = function() {
     $.gulp.task('sass', function(){
-	    return $.gulp.src(['./src/style/main.scss']) // Берем все sass файлы из папки sass и дочерних, если таковые будут
+	    return $.gulp.src(['./src/style/app.scss']) // Берем все sass файлы из папки sass и дочерних, если таковые будут
 			
 
 			.pipe( $.sass().on( 'error', $.notify.onError( //Уведомление
