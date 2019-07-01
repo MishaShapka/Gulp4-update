@@ -1,6 +1,6 @@
 module.exports = function() {
     $.gulp.task("pug", function() {
-        return $.gulp.src(["./src/views/**/index.pug"])
+        return $.gulp.src(["./src/templates/index.pug"])
             .pipe($.pug({pretty: true})
             .on( 'error', $.notify.onError( //уведомления
                 {
