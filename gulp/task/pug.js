@@ -1,6 +1,6 @@
 module.exports = function() {
     $.gulp.task("pug", function() {
-        return $.gulp.src(["./src/templates/index.pug"])
+        return $.gulp.src(["./src/index.pug"])
             .pipe($.pug({pretty: true})
             .on( 'error', $.notify.onError( //уведомления
                 {
@@ -11,6 +11,7 @@ module.exports = function() {
             .pipe($.gulpPugBeautify({ omit_empty: true }))
             .pipe($.replace("../dist/"))
             .pipe($.gulp.dest("./dist/"))
+            .pipe($.gulp.dest("./src/"))
             .pipe($.debug({"title": "html"}))
             .on("end", $.browsersync.reload);
     });

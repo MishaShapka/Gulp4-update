@@ -26,6 +26,7 @@ global.$ = {
     uglify: require("gulp-uglify"),
     concat: require("gulp-concat"),
     gulpPugBeautify: require('gulp-pug-beautify'),
+    html2pug: require('gulp-html2pug'),
 
     path: {
         tasks: require("./gulp/config.js")
@@ -39,6 +40,7 @@ $.path.tasks.forEach(function(taskPath) {
 $.gulp.task("default", 
     $.gulp.series("clean", "iconfont", 
     $.gulp.parallel("pug", "sass", "scripts", "images", "favicons"),
+    $.gulp.parallel("html2pug"),
     $.gulp.parallel("transfer"),
     $.gulp.parallel("watch", "serve"),
 ));

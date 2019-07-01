@@ -9,6 +9,7 @@ module.exports = [
     "./gulp/task/iconfont",
     "./gulp/task/transfer",
     "./gulp/task/scripts",
+    "./gulp/task/html2pug",
 
     
 ];
