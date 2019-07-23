@@ -40,7 +40,7 @@ $.path.tasks.forEach(function(taskPath) {
 $.gulp.task("default", 
     $.gulp.series("clean", "iconfont", 
     $.gulp.parallel("pug", "sass", "scripts", "images", "favicons"),
-    $.gulp.parallel("html2pug"),
+    //$.gulp.parallel("html2pug"),
     $.gulp.parallel("transfer"),
     $.gulp.parallel("watch", "serve"),
 ));

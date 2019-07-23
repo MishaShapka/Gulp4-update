@@ -11,7 +11,6 @@ module.exports = function() {
             .pipe($.gulpPugBeautify({ omit_empty: true }))
             .pipe($.replace("../dist/"))
             .pipe($.gulp.dest("./dist/"))
-            .pipe($.gulp.dest("./src/"))
             .pipe($.debug({"title": "html"}))
             .on("end", $.browsersync.reload);
     });
